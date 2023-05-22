@@ -16,7 +16,7 @@ class HomePage(BasePage):
 
     def add_to_cart2(self):
         self.driver.find_element(*HomePageLocators.BUTTON_ADD_TO_CART_bike).click()
-
+        assert self.driver.find_element(*HomePageLocators.BUTTON_REMOVE_FROM_CART_bike).is_displayed()
     def remove_from_cart2(self):
         self.driver.find_element(*HomePageLocators.BUTTON_REMOVE_FROM_CART_bike).click()
 

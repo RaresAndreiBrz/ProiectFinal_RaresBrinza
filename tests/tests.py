@@ -47,7 +47,7 @@ class Tests(BaseTests):
         time.sleep(1)
         add1 = HomePage(self.driver)
         time.sleep(1)
-        add1.add_to_cart()------------------------------------------------------------------------------
+        add1.add_to_cart()
 
     def test_remove_cart_item(self):
         log1 = LoginPage(self.driver)
