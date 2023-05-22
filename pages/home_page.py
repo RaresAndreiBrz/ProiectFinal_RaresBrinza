@@ -29,7 +29,6 @@ class HomePage(BasePage):
         time.sleep(1)
         self.driver.find_element(*HomePageLocators.BUTTON_MENU_LOGOUT).click()
         time.sleep(1)
-
         assert self.driver.find_element(*LoginPageLocators.BUTON_LOGIN).is_displayed(), 'Nu e pg de login aici'
 
     def sorting_price_desc(self):
@@ -76,4 +75,7 @@ class HomePage(BasePage):
         assert self.driver.find_element(*HomePageLocators.BUTTON_SORT).is_displayed()
 
     def items_are_here(self):
+        assert self.driver.find_element(*HomePageLocators.BUTTON_ADD_TO_CART_bike).is_displayed()
+
+    def is_shop_page_open(self):
         assert self.driver.find_element(*HomePageLocators.BUTTON_ADD_TO_CART_bike).is_displayed()

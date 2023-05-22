@@ -20,7 +20,8 @@ class Tests(BaseTests):
     def test_Login_true(self):
         logare2 = LoginPage(self.driver)
         logare2.login_true()
-        logare2.is_shop_page_open()
+        logare3 = HomePage(self.driver)
+        logare3.is_shop_page_open()
 
     def test_Login_Out(self):
         logare3 = LoginPage(self.driver)
@@ -46,7 +47,7 @@ class Tests(BaseTests):
         time.sleep(1)
         add1 = HomePage(self.driver)
         time.sleep(1)
-        add1.add_to_cart()
+        add1.add_to_cart()------------------------------------------------------------------------------
 
     def test_remove_cart_item(self):
         log1 = LoginPage(self.driver)
@@ -108,8 +109,7 @@ class Tests(BaseTests):
         check2.go_to_inventory_page()
         time.sleep(1)
         next_url = self.driver.current_url
-
-        assert self.driver.current_url != this_url, "URL acelasi"
+        assert next_url != this_url, "URL acelasi"
 
     def test_place_order(self):
         log_1 = LoginPage(self.driver)
